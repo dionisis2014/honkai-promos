@@ -15,7 +15,6 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-
 import json
 import logging
 import os
@@ -204,7 +203,8 @@ if __name__ == "__main__":
             logger.debug(f"Found {len(codes)} promo code{'' if len(codes) == 1 else 's'}")
 
             if codes:
-                logger.info(f"Found {len(codes)} new code{'' if len(codes) == 1 else 's'}")
+                logger.info(f"Found {len(codes)} new code{'' if len(codes) == 1 else 's'}: "
+                            f"[ {' '.join(code[0] for code in codes)} ]")
                 logger.debug("Sending trigger to Home Assistant ...")
                 trigger.trigger(json.dumps(
                     {
