@@ -9,7 +9,14 @@ Assistant via MQTT.
 ![](https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/85/Houkai3rd_logo_JP.png)
 ![](https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/64/Crystals.png/revision/latest/scale-to-width-down/128)
 
-## Environment variables
+# Docker options
+
+## Volume mounts
+
+The container uses the `/mnt` directory to store its persistent data. Simply add `-v <volume_or_bind>:/mnt` to the
+docker run command to persist changes across container restart or updates.
+
+### Environment variables
 
 | NAME          | DEFAULT             |       TYPE        | DESCRIPTION                                                      |
 |---------------|---------------------|:-----------------:|------------------------------------------------------------------|
