@@ -1,0 +1,5 @@
+beautifulsoup4
+colorlog
+ha-mqtt-discoverable
+pause
+requests
